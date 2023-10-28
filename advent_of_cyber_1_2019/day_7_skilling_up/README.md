@@ -6,13 +6,13 @@
 
 ## Walkthrough
 
-1.) Lets download the machine task files and open the pcap file with the tool wireshark.
+1.) Lets ping the machine to see if it is up and running.
 
 ```bash
-wireshark holidaythief.pcap
+ping 10.10.202.102
 ```
 
-![](imgs/wireshark.png)
+![](imgs/ping.png)
 
 2.) By looking through the pcap file, we can see alot of packets using unencrypted protocols such as DNS and HTTP. These packets can be reconstructed and we can see all the data the packet contains. Lets reconstruct the DNS stream and see if any data looks interesting.
 
