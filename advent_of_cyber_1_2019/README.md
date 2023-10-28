@@ -13,3 +13,4 @@
 | [[Day 4] Training](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_4_training)| #Linux #Bash #File Structure |
 | [[Day 5] Ho-Ho-Hosint](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_5_Ho-Ho-Hosint)| #OSINT #Metadata #Public Information |
 | [[Day 6] Data Elf-iltration](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_6_data_elf-iltration)| #Data Exfiltration #Steghide #fcrackzip |
+| [[Day 7] Skilling Up]()| #Networking #Ports #NMAP |
