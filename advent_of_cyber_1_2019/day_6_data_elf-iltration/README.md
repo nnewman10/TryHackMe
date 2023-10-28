@@ -34,13 +34,13 @@ fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v christmaslists
 
 ![](imgs/fcrackzip.png)
 
-6.) 
+6.) Using Steganography, you can hide data within another message or physical object such as a image file. Using the tool steghide, we can try and extract any information hidden. Lets see if anything is hidden within the TryHackMe.jpg.
 
-![](imgs/firstwebsite.png)
+```bash
+steghide extract -sf TryHackMe.jpg
+```
 
-7.) 
-![](imgs/googleimageserach.png)
-
+![](imgs/steghide.png)
 
 ## Tasks
 | Task | Question | Answer |
