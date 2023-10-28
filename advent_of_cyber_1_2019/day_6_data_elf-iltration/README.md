@@ -14,9 +14,9 @@ wireshark holidaythief.pcap
 
 ![](imgs/wireshark.png)
 
-2.) Using the CLI tool exiftool, we can try to find any metadata attached to the image that will be useful. We see there is a username attached to the image's metadata.
+2.) By looking through the pcap file, we can see alot of packets using unencrypted protocols such as DNS and HTTP. These packets can be reconstructed and we can see all the data the packet contains. Lets reconstruct the DNS stream and see if any data looks interesting.
 
-![](imgs/metadata.png)
+![](imgs/dnsstream.png)
 
 3.) Using Google, lets try to see if this username is associated with any social media accounts. The first result shows that the username is connected to a twitter/X account.
 
