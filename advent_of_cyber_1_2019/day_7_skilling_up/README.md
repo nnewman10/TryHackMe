@@ -14,9 +14,13 @@ ping 10.10.202.102
 
 ![](imgs/ping.png)
 
-2.) By looking through the pcap file, we can see alot of packets using unencrypted protocols such as DNS and HTTP. These packets can be reconstructed and we can see all the data the packet contains. Lets reconstruct the DNS stream and see if any data looks interesting.
+2.) Lets run an nmap scan on the machine that will use the TCP protocol to scan all the ports and get back the most information from the machine as possible.
 
-![](imgs/dnsstream.png)
+```bash
+nmap -A -p- 10.10.202.102
+```
+
+![](imgs/nmap.png)
 
 3.) The subdomain string for holidaythief.com looks very out of place, it looks like the string is hex encoded. Using CyberChef, lets decode the string and see if any data was trying to be exfiltrated out of the network throught this packet.
 
