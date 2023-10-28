@@ -45,9 +45,9 @@ steghide extract -sf TryHackMe.jpg
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | What is Lola's date of birth? Format: Month Date, Year(e.g November 12, 2019) | December 29, 1900 |
-| Task #2 | What is Lola's current occupation?| Santa's Helper |
-| Task #3 | What phone does Lola make? | iPhone X |
+| Task #1 | What data was exfiltrated via DNS? | Candy Cane Serial Number 8491 |
+| Task #2 | What did Little Timmy want to be for Christmas? | PenTester |
+| Task #3 | What was hidden within the file? | RFC527 |
 
 
 
