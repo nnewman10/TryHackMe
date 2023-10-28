@@ -7,11 +7,12 @@
 ## Walkthrough
 
 1.) Lets download the machine task files and open the pcap file with the tool wireshark.
+
 ```bash
 wireshark holidaythief.pcap
 ```
 
-![](imgs/thegrinch.png)
+![](imgs/wireshark.png)
 
 2.) Using the CLI tool exiftool, we can try to find any metadata attached to the image that will be useful. We see there is a username attached to the image's metadata.
 
