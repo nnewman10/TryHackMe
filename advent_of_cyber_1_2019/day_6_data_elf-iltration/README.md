@@ -18,9 +18,9 @@ wireshark holidaythief.pcap
 
 ![](imgs/dnsstream.png)
 
-3.) Using Google, lets try to see if this username is associated with any social media accounts. The first result shows that the username is connected to a twitter/X account.
+3.) The subdomain string for holidaythief.com looks very out of place, it looks like the string is hex encoded. Using CyberChef, lets decode the string and see if any data was trying to be exfiltrated out of the network throught this packet.
 
-![](imgs/username.png)
+![](imgs/cyberchef.png)
 
 4.) The twitter account contains the user's DoB, occupation, location, and personal website. That is alot more data that is now available for OSINT research. 
 
