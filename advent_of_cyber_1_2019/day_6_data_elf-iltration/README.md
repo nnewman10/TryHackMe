@@ -26,9 +26,13 @@ wireshark holidaythief.pcap
 
 ![](imgs/httpstream.png)
 
-5.) 
+5.) The HTTP stream shows that two resources were requested, christmaslists.zip and TryHackMe.jpg. Since this stream was using the HTTP and not HTTPS we can use wireshark to download these resources by going to File -> Export Objects -> HTTP. If we try to unzip the christmaslists.zip file, we are prompted for a password. We can actually brute force zip files by using the tool fcrackzip and the rockyou.txt wordlist.
 
-![](imgs/wayback.png)
+```bash
+fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v christmaslists.zip
+```
+
+![](imgs/fcrackzip.png)
 
 6.) 
 
