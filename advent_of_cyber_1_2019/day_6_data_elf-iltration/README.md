@@ -6,7 +6,10 @@
 
 ## Walkthrough
 
-1.) Lets download the machine task files and open the image to view what we are working with.
+1.) Lets download the machine task files and open the pcap file with the tool wireshark.
+```bash
+wireshark holidaythief.pcap
+```
 
 ![](imgs/thegrinch.png)
 
