@@ -22,29 +22,9 @@ nmap -A -p- 10.10.202.102
 
 ![](imgs/nmap.png)
 
-3.) The subdomain string for holidaythief.com looks very out of place, it looks like the string is hex encoded. Using CyberChef, lets decode the string and see if any data was trying to be exfiltrated out of the network throught this packet.
+3.) This machine is showing a open http service (web application) on port 999, lets take a look and see if we can find any interesting information.
 
-![](imgs/cyberchef.png)
-
-4.) Going back to the pcap file, lets take a look the the HTTP stream for all the HTTP packets and see if any data looks interesting. 
-
-![](imgs/httpstream.png)
-
-5.) The HTTP stream shows that two resources were requested, christmaslists.zip and TryHackMe.jpg. Since this stream was using the HTTP and not HTTPS we can use wireshark to download these resources by going to File -> Export Objects -> HTTP. If we try to unzip the christmaslists.zip file, we are prompted for a password. We can actually brute force zip files by using the tool fcrackzip and the rockyou.txt wordlist.
-
-```bash
-fcrackzip -b --method 2 -D -p /usr/share/wordlists/rockyou.txt -v christmaslists.zip
-```
-
-![](imgs/fcrackzip.png)
-
-6.) Using Steganography, you can hide data within another message or physical object such as a image file. Using the tool steghide, we can try and extract any information hidden. Lets see if anything is hidden within the TryHackMe.jpg.
-
-```bash
-steghide extract -sf TryHackMe.jpg
-```
-
-![](imgs/steghide.png)
+![](imgs/webapp.png)
 
 ## Tasks
 | Task | Question | Answer |
