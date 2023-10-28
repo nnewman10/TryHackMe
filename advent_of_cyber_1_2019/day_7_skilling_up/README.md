@@ -29,9 +29,10 @@ nmap -A -p- 10.10.202.102
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | What data was exfiltrated via DNS? | Candy Cane Serial Number 8491 |
-| Task #2 | What did Little Timmy want to be for Christmas? | PenTester |
-| Task #3 | What was hidden within the file? | RFC527 |
+| Task #1 | how many TCP ports under 1000 are open? | 3 |
+| Task #2 | What is the name of the OS of the host? | Linux |
+| Task #3 | What version of SSH is running? | 7.4 |
+| Task #4 | What is the name of the file that is accessible on the server you found running? | interesting.file |
 
 
 
