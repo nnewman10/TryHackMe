@@ -14,13 +14,13 @@ ping 10.10.169.45
 
 ![](imgs/ping.png)
 
-2.) Lets run an nmap scan on the machine that will use the TCP protocol to scan all the ports and get back the most information from the machine as possible.
+2.) Lets connect to the machine through ssh on port 65534 using username:password holly:tuD@4vt0G*TU
 
 ```bash
-nmap -A -p- 10.10.202.102
+ssh -p 65534 holly@10.10.169.45
 ```
 
-![](imgs/nmap.png)
+![](imgs/ssh.png)
 
 3.) This machine is showing a open http service (web application) on port 999, lets take a look and see if we can find any interesting information.
 
