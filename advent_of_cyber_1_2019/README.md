@@ -14,3 +14,4 @@
 | [[Day 5] Ho-Ho-Hosint](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_5_Ho-Ho-Hosint)| #OSINT #Metadata #Public Information |
 | [[Day 6] Data Elf-iltration](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_6_data_elf-iltration)| #Data Exfiltration #Steghide #fcrackzip |
 | [[Day 7] Skilling Up](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_7_skilling_up)| #Networking #Ports #NMAP |
+| [[Day 8] SUID Shenanigans](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_8_suid_shenanigans)| #Linux Privilege Escalation #SUID #GTFOBins |
