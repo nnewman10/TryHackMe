@@ -2,7 +2,7 @@
 ### Tags: `#Linux Privilege Escalation #SUID #GTFOBins`
 #### [Machine Link](https://tryhackme.com/room/25daysofchristmas)
 
-<img src='imgs/advent2019day8.png' width='200' align='center'>
+<img src='imgs/advent2019day8.gif' width='200' align='center'>
 
 ## Walkthrough
 
