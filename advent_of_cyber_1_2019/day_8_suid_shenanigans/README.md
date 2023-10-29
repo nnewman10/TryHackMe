@@ -9,7 +9,7 @@
 1.) Lets ping the machine to see if it is up and running.
 
 ```bash
-ping 10.10.202.102
+ping 10.10.169.45
 ```
 
 ![](imgs/ping.png)
