@@ -48,10 +48,9 @@ find flag1.txt -exec cat flag1.txt \;
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | how many TCP ports under 1000 are open? | 3 |
-| Task #2 | What is the name of the OS of the host? | Linux |
-| Task #3 | What version of SSH is running? | 7.4 |
-| Task #4 | What is the name of the file that is accessible on the server you found running? | interesting.file |
+| Task #1 | What port is SSH running on? | 65534 |
+| Task #2 | Find and run a file as igor. Read the file /home/igor/flag1.txt | THM{d3f0708bdd9accda7f937d013eaf2cd8} |
+| Task #3 | Find another binary file that has the SUID bit set. Using this file, can you become the root user and read the /root/flag2.txt file? | THM{8c8211826239d849fa8d6df03749c3a2} |
 
 
 
