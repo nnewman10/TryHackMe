@@ -22,9 +22,14 @@ ssh -p 65534 holly@10.10.169.45
 
 ![](imgs/ssh.png)
 
-3.) This machine is showing a open http service (web application) on port 999, lets take a look and see if we can find any interesting information.
+3.) Lets try and find all the binaries with the SUID bit set using the following commands.
 
-![](imgs/webapp.png)
+```bash
+find / -perm -u=s -type f 2>/dev/null
+find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
+```
+
+![](imgs/suid.png)
 
 ## Tasks
 | Task | Question | Answer |
