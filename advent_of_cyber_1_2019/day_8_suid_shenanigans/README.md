@@ -41,6 +41,10 @@ find flag1.txt -exec cat flag1.txt \;
 
 ![](imgs/find.png)
 
+5.) The binary /usr/bin/system-control looks like a custom file and has the SUID bit set. Lets execute the bin and see if we can root on the machine.
+
+![](imgs/root.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
