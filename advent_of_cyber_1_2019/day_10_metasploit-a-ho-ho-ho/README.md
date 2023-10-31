@@ -62,6 +62,10 @@ set LHOST 10.13.37.142
 
 ![](imgs/setoptions.png)
 
+8.) With all the required fields set within Metasploit, we can execute the exploit by running the command run.
+
+![](imgs/run.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
