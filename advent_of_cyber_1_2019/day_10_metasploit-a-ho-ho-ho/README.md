@@ -1,5 +1,5 @@
 # [Day 10] Metasploit-a-ho-ho-ho Writeup
-### Tags: `#Linux Privilege Escalation #SUID #GTFOBins`
+### Tags: `#Linux Webapp #Metasploit #Meterpreter`
 #### [Machine Link](https://tryhackme.com/room/25daysofchristmas)
 
 <img src='imgs/advent2019day10.png' width='200' align='center'>
