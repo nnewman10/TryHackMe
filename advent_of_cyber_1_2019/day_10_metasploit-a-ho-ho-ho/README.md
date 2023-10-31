@@ -34,6 +34,20 @@ nmap -A 10.10.173.247
 
 ![](imgs/searchsploit.png)
 
+6.) Using Metasploit, lets execute the struts2_content_type_ognl exploit.
+
+```bash
+msfconsole
+
+search struts2
+
+use 6
+
+show options
+```
+
+![](imgs/usemsf.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
