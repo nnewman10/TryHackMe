@@ -84,6 +84,10 @@ find / 2>dev/null | grep -i "flag1"
 
 ![](imgs/sshcreds.png)
 
+12.) Using the username:password combo found in the ssh-creds.txt file and with a open port 22 (ssh service), we can bypass the docker container and login directly to the machine using the santa user.
+
+![](imgs/sshlogin.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
