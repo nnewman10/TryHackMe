@@ -22,7 +22,7 @@ nmap -A 10.10.173.247
 
 ![](imgs/nmap.png)
 
-3.) Lets take a look at the Apache webapp running on port 80.
+3.) Lets take a look at the Apache webapp running on port 80. The home page redirects to /showcase.action, this seems unique.
 
 ![](imgs/webapp.png)
 
