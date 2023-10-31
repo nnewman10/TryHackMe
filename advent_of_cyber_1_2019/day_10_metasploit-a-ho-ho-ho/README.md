@@ -22,14 +22,9 @@ nmap -A 10.10.173.247
 
 ![](imgs/nmap.png)
 
-3.) Lets try and find all the binaries with the SUID bit set using the following commands.
+3.) Lets take a look at the Apache webapp running on port 80.
 
-```bash
-find / -perm -u=s -type f 2>/dev/null
-find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null
-```
-
-![](imgs/suid.png)
+![](imgs/webapp.png)
 
 4.) Using the binary "find" and the SUID bit set, we can use the -exec flag to run commands of the owner of the bin. 
 
