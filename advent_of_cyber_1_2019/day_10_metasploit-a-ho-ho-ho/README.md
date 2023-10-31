@@ -66,6 +66,16 @@ set LHOST 10.13.37.142
 
 ![](imgs/run.png)
 
+9.) Now that we have a meterpreter shell, we can drop into a standard shell by running the command shell. What we are trying to do is run a bash command to find any files on the machine that have flag1 within its name.
+
+```bash
+shell
+
+find / 2>dev/null | grep -i "flag1"
+```
+
+![](imgs/flag1.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
