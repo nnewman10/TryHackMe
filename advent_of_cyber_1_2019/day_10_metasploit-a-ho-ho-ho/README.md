@@ -9,18 +9,18 @@
 1.) Lets ping the machine to see if it is up and running.
 
 ```bash
-ping 10.10.169.45
+ping 10.10.173.247
 ```
 
 ![](imgs/ping.png)
 
-2.) Lets connect to the machine through ssh on port 65534 using username:password holly:tuD@4vt0G*TU
+2.) Lets run a nmap scan on the machine to enumerate all services on open ports.
 
 ```bash
-ssh -p 65534 holly@10.10.169.45
+nmap -A 10.10.173.247
 ```
 
-![](imgs/ssh.png)
+![](imgs/nmap.png)
 
 3.) Lets try and find all the binaries with the SUID bit set using the following commands.
 
