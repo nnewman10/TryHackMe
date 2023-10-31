@@ -80,6 +80,10 @@ find / 2>dev/null | grep -i "flag1"
 
 ![](imgs/docker.png)
 
+11.) Now taking a look at the santa home directory, we see a file named ssh-creds.txt. 
+
+![](imgs/sshcreds.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
