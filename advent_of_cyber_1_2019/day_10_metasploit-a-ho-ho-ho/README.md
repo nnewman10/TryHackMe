@@ -88,6 +88,21 @@ find / 2>dev/null | grep -i "flag1"
 
 ![](imgs/sshlogin.png)
 
+13.) Checking the home directory for santa, we see two files naughty_list.txt and nice_list.txt.
+
+
+```bash
+cat -n naughty_list.txt
+or
+vim naughty_list.txt
+:wq
+
+cat -n nice_list.txt
+or
+vim nice_list.txt
+:wq
+```
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
