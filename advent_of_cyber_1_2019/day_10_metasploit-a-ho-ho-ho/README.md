@@ -76,6 +76,10 @@ find / 2>dev/null | grep -i "flag1"
 
 ![](imgs/flag1.png)
 
+10.) Lets take a look at the / directory. Do you notice the .dockerenv file. This is a sign that we are currently isolated inside a active containter. Another sign is to run the ps command and take note of the number of processes (less processes means most likely a docker container).
+
+![](imgs/docker.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
