@@ -26,15 +26,9 @@ nmap -A 10.10.173.247
 
 ![](imgs/webapp.png)
 
-4.) Using the binary "find" and the SUID bit set, we can use the -exec flag to run commands of the owner of the bin. 
+4.) Using google, lets search for apache showcase.action and see if we can find any results for exploits that we can use. The 4th result from www.rapid7.com seems like a good fit because Rapid7 is the developers of Metasploit.
 
-```bash
-find flag1.txt -exec chmod 777 flag1.txt \;
-or
-find flag1.txt -exec cat flag1.txt \;
-```
-
-![](imgs/find.png)
+![](imgs/showcase_action.png)
 
 5.) The binary /usr/bin/system-control looks like a custom file and has the SUID bit set. Lets execute the bin and see if we can root on the machine.
 
