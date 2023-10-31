@@ -30,9 +30,9 @@ nmap -A 10.10.173.247
 
 ![](imgs/showcase_action.png)
 
-5.) The binary /usr/bin/system-control looks like a custom file and has the SUID bit set. Lets execute the bin and see if we can root on the machine.
+5.) Using the CLI tool searchsploit, which is a local version of the exploitDB maintained by OffSec. We can see the exploits listed for Apache Struts.
 
-![](imgs/root.png)
+![](imgs/searchsploit.png)
 
 ## Tasks
 | Task | Question | Answer |
