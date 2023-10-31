@@ -106,9 +106,10 @@ vim nice_list.txt
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | What port is SSH running on? | 65534 |
-| Task #2 | Find and run a file as igor. Read the file /home/igor/flag1.txt | THM{d3f0708bdd9accda7f937d013eaf2cd8} |
-| Task #3 | Find another binary file that has the SUID bit set. Using this file, can you become the root user and read the /root/flag2.txt file? | THM{8c8211826239d849fa8d6df03749c3a2} |
+| Task #1 | Compromise the web server using Metasploit. What is flag1? | THM{3ad96bb13ec963a5ca4cb99302b37e12} |
+| Task #2 | Now you've compromised the web server, get onto the main system. What is Santa's SSH password? | rudolphrednosedreindeer |
+| Task #3 | Who is on line 148 of the naughty list? | Melisa Vanhoose |
+| Task #4 | Who is on line 52 of the nice list? | Lindsey Gaffney |
 
 
 
