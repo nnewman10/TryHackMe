@@ -30,9 +30,13 @@ showmount -e 10.10.244.242
 
 ![](imgs/showmount.png)
 
-4.) Using google, lets search for apache showcase.action and see if we can find any results for exploits that we can use. The 4th result from www.rapid7.com seems like a good fit because Rapid7 is the developers of Metasploit.
+4.) We can mount the share to our local system by using the mount command and at that point we can browse the share.
 
-![](imgs/showcase_action.png)
+```bash
+sudo mount -t nfs 10.10.244.242:/opt /tmp/opt
+```
+
+![](imgs/mount.png)
 
 5.) Using the CLI tool searchsploit, which is a local version of the exploitDB maintained by OffSec. We can see the exploits listed for Apache Struts.
 
