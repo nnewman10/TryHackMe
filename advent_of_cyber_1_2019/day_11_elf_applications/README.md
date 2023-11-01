@@ -38,23 +38,13 @@ sudo mount -t nfs 10.10.244.242:/opt /tmp/opt
 
 ![](imgs/mount.png)
 
-5.) Using the CLI tool searchsploit, which is a local version of the exploitDB maintained by OffSec. We can see the exploits listed for Apache Struts.
+5.) With the share mounted to the local system, we can go to the tmp directory that was created. There is a interesting file called creds.txt, lets see what we can find in there.
 
-![](imgs/searchsploit.png)
+![](imgs/mountfiles.png)
 
-6.) Using Metasploit, lets execute the struts2_content_type_ognl exploit.
+6.) Once we are done with the share, we can unmount it from our local system by running the umount command.
 
-```bash
-msfconsole
-
-search struts2
-
-use 6
-
-show options
-```
-
-![](imgs/usemsf.png)
+![](imgs/umount.png)
 
 7.) When using Metasploit, we need to set all the required options before trying to execute the exploit on the machine.
 
