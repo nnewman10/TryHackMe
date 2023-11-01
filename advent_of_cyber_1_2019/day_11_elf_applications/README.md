@@ -46,19 +46,13 @@ sudo mount -t nfs 10.10.244.242:/opt /tmp/opt
 
 ![](imgs/umount.png)
 
-7.) When using Metasploit, we need to set all the required options before trying to execute the exploit on the machine.
+7.) Next lets take a look at the FTP service running on port 21. The nmap scan shows that the anonymous login is enabled, We can enumerate this service suing the ftp command.
 
 ```bash
-set RHOSTS 10.10.173.247
-
-Set RPORT 80
-
-set TARGETURI /showcase.action
-
-set LHOST 10.13.37.142
+ftp 10.10.244.242
 ```
 
-![](imgs/setoptions.png)
+![](imgs/ftplogin.png)
 
 8.) With all the required fields set within Metasploit, we can execute the exploit by running the command run.
 
