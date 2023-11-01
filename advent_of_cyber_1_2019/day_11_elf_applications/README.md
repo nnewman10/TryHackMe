@@ -9,7 +9,7 @@
 1.) Lets ping the machine to see if it is up and running.
 
 ```bash
-ping 10.10.173.247
+ping 10.10.244.242
 ```
 
 ![](imgs/ping.png)
@@ -17,7 +17,7 @@ ping 10.10.173.247
 2.) Lets run a nmap scan on the machine to enumerate all services on open ports.
 
 ```bash
-nmap -A 10.10.173.247
+nmap -A 10.10.244.242
 ```
 
 ![](imgs/nmap.png)
