@@ -22,9 +22,13 @@ nmap -A 10.10.244.242
 
 ![](imgs/nmap.png)
 
-3.) Lets take a look at the Apache webapp running on port 80. The home page redirects to /showcase.action, this seems unique.
+3.) Lets first take a look at the NFS service running on port 2049. We can enumerate all the shares using the showmount command.
 
-![](imgs/webapp.png)
+```bash
+showmount -e 10.10.244.242
+```
+
+![](imgs/showmount.png)
 
 4.) Using google, lets search for apache showcase.action and see if we can find any results for exploits that we can use. The 4th result from www.rapid7.com seems like a good fit because Rapid7 is the developers of Metasploit.
 
