@@ -59,42 +59,18 @@ ftp 10.10.244.242
 ![](imgs/ftpget.png)
 ![](imgs/ftpfile.png)
 
-9.) Now that we have a meterpreter shell, we can drop into a standard shell by running the command shell. What we are trying to do is run a bash command to find any files on the machine that have flag1 within its name.
+9.) The file found on the FTP service has what looks like a username and password for the MySQL service running on port 3306, lets try connecting with those creds.
 
 ```bash
-shell
-
-find / 2>dev/null | grep -i "flag1"
+mysql -h 10.10.244.242 -u root -p
 ```
 
-![](imgs/flag1.png)
+![](imgs/sqllogin.png)
 
-10.) Lets take a look at the / directory. Do you notice the .dockerenv file. This is a sign that we are currently isolated inside a active containter. Another sign is to run the ps aux command and take note of the number of processes (less processes means most likely a docker container).
+10.) Now that we are connected to the mysql service, lets enumerate the DBRMs and see if we can find any information we can use for later.
 
-![](imgs/docker.png)
+![](imgs/sqldata.png)
 
-11.) Now taking a look at the santa home directory, we see a file named ssh-creds.txt. 
-
-![](imgs/sshcreds.png)
-
-12.) Using the username:password combo found in the ssh-creds.txt file and with a open port 22 (ssh service), we can bypass the docker container and login directly to the machine using the santa user.
-
-![](imgs/sshlogin.png)
-
-13.) Checking the home directory for santa, we see two files naughty_list.txt and nice_list.txt.
-
-
-```bash
-cat -n naughty_list.txt
-or
-vim naughty_list.txt
-:wq
-
-cat -n nice_list.txt
-or
-vim nice_list.txt
-:wq
-```
 
 ## Tasks
 | Task | Question | Answer |
