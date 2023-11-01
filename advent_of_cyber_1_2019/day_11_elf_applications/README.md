@@ -46,7 +46,7 @@ sudo mount -t nfs 10.10.244.242:/opt /tmp/opt
 
 ![](imgs/umount.png)
 
-7.) Next lets take a look at the FTP service running on port 21. The nmap scan shows that the anonymous login is enabled, We can enumerate this service suing the ftp command.
+7.) Next lets take a look at the FTP service running on port 21. The nmap scan shows that the anonymous login is enabled, We can enumerate this service using the ftp command.
 
 ```bash
 ftp 10.10.244.242
@@ -54,9 +54,10 @@ ftp 10.10.244.242
 
 ![](imgs/ftplogin.png)
 
-8.) With all the required fields set within Metasploit, we can execute the exploit by running the command run.
+8.) If we want to take a look at the file.txt contents we first need to download the file from the FTP server, the command to download the file to our local system is get. Once the download is complete we can exit the FTP service by typing exit and then we can display the contents of file.txt using the cat or vim command.
 
-![](imgs/run.png)
+![](imgs/ftpget.png)
+![](imgs/ftpfile.png)
 
 9.) Now that we have a meterpreter shell, we can drop into a standard shell by running the command shell. What we are trying to do is run a bash command to find any files on the machine that have flag1 within its name.
 
