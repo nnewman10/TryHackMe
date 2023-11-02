@@ -17,4 +17,5 @@
 | [[Day 8] SUID Shenanigans](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_8_suid_shenanigans)| #Linux Privilege Escalation #SUID #GTFOBins |
 | [[Day 10] Metasploit-a-ho-ho-ho](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_10_metasploit-a-ho-ho-ho)| #Linux Webapp #Metasploit #Meterpreter |
 | [[Day 11] Elf Applications](https://github.com/nnewman10/TryHackMe/tree/main/advent_of_cyber_1_2019/day_11_elf_applications)| #FTP #NFS #MySQL |
+| [[Day 12] Elfcryption]()| #Encryption #GPG #OpenSSL |
 
