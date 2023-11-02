@@ -6,78 +6,40 @@
 
 ## Walkthrough
 
-1.) Lets ping the machine to see if it is up and running.
+1.) Lets download the task files and then unzip the tosend.zip file using the unzip command.
 
 ```bash
-ping 10.10.244.242
+unzip tosend.zip
 ```
+![](imgs/unzip.png)
 
-![](imgs/ping.png)
-
-2.) Lets run a nmap scan on the machine to enumerate all services on open ports.
+2.) Lets generate the md5 hash for the note1.txt.gpg file using the md5sum command.
 
 ```bash
-nmap -A 10.10.244.242
+md5sum note1.txt.gpg
 ```
+![](imgs/hash.png)
 
-![](imgs/nmap.png)
-
-3.) Lets first take a look at the NFS service running on port 2049. We can enumerate all the shares using the showmount command.
+3.) Next lets decrypt the note1.txt.gpg file using the key "25daysofchristmas" found from the task hint.
 
 ```bash
-showmount -e 10.10.244.242
+gpg -d note1.txt.gpg
 ```
+![](imgs/gpg.png)
 
-![](imgs/showmount.png)
-
-4.) We can mount the share to our local system by using the mount command and at that point we can browse the share.
+4.) Last lets decrypt the note2_encrypted.txt using the private.key and the passphrase "hello" found from the task hint.
 
 ```bash
-sudo mount -t nfs 10.10.244.242:/opt /tmp/opt
+openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out plaintext.txt
 ```
-
-![](imgs/mount.png)
-
-5.) With the share mounted to the local system, we can go to the tmp directory that was created. There is a interesting file called creds.txt, lets see what we can find in there.
-
-![](imgs/mountfiles.png)
-
-6.) Once we are done with the share, we can unmount it from our local system by running the umount command.
-
-![](imgs/umount.png)
-
-7.) Next lets take a look at the FTP service running on port 21. The nmap scan shows that the anonymous login is enabled, We can enumerate this service using the ftp command.
-
-```bash
-ftp 10.10.244.242
-```
-
-![](imgs/ftplogin.png)
-
-8.) If we want to take a look at the file.txt contents we first need to download the file from the FTP server, the command to download the file to our local system is get. Once the download is complete we can exit the FTP service by typing exit and then we can display the contents of file.txt using the cat or vim command.
-
-![](imgs/ftpget.png)
-![](imgs/ftpfile.png)
-
-9.) The file found on the FTP service has what looks like a username and password for the MySQL service running on port 3306, lets try connecting with those creds.
-
-```bash
-mysql -h 10.10.244.242 -u root -p
-```
-
-![](imgs/sqllogin.png)
-
-10.) Now that we are connected to the mysql service, lets enumerate the DBRMs and see if we can find any information we can use for later.
-
-![](imgs/sqldata.png)
-
+![](imgs/openssl.png)
 
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | What is the password inside the creds.txt file? | securepassword123 |
-| Task #2 | What is the name of the file running on port 21? | file.txt |
-| Task #3 | What is the password after enumerating the database? | bestpassword |
+| Task #1 | What is the md5 hashsum of the encrypted note1 file? | 24cf615e2a4f42718f2ff36b35614f8f |
+| Task #2 | Where was elf Bob told to meet Alice? | Santa's Grotto |
+| Task #3 | Decrypt note2 and obtain the flag! | THM{ed9ccb6802c5d0f905ea747a310bba23} |
 
 
 
