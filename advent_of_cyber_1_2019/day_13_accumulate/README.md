@@ -54,6 +54,26 @@ dirsearch -u http://10.10.12.139 -w /usr/share/wordlists/dirbuster/directory-lis
 
 ![](imgs/wpadmin.png)
 
+10.) Uaing the 404.php template located under Apperance -> Theme Editor, we can replace the default template with a php reverse shell to try and get initial access.
+
+![](imgs/404template.png)
+
+11.) Using the pentestmonkey (Linux Machine) or Ivan Sincek (Windows Machine) or revshells.com php reverse shell scripts, we can replace the default 404.php template for our exploit for initial access.
+
+![](imgs/phpreverseshell.png)
+![](imgs/ivansincekphp.png)
+![](imgs/revshells.png)
+![](imgs/exploit.png)
+
+12.) With the 404.php file updated with the php reverse shell, we can start a netcat listener on our local machine and then execute the exploit by going to the location of the 404.php file.
+
+```bash
+nc -nvlp 1234
+http://10.10.12.139/retro/wp-content/themes/90s-retro/404.php
+```
+![](imgs/404php.png)
+![](imgs/reverseshell.png)
+
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
