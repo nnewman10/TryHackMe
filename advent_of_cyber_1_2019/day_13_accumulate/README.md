@@ -1,5 +1,5 @@
 # [Day 13] Accumulate Writeup
-### Tags: `#Windows Webapp #Wordpress #JuicyPotato`
+### Tags: `#Windows WebApp #Wordpress #JuicyPotato`
 #### [Machine Link](https://tryhackme.com/room/25daysofchristmas)
 
 <img src='imgs/advent2019day13.png' width='200' align='center'>
