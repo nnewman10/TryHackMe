@@ -6,33 +6,53 @@
 
 ## Walkthrough
 
-1.) Lets download the task files and then unzip the tosend.zip file using the unzip command.
+1.) Lets ping the machine ip and see if it is up and running. Im pretty sure this machine is ignoring ICMP.
 
 ```bash
-unzip tosend.zip
+ping 10.10.12.139
 ```
-![](imgs/unzip.png)
+![](imgs/ping.png)
 
-2.) Lets generate the md5 hash for the note1.txt.gpg file using the md5sum command.
+2.) Lets run a quick test nmap scan to double check that the machine is up and responding to other requests besides ICMP.
 
 ```bash
-md5sum note1.txt.gpg
+nmap 10.10.12.139
 ```
-![](imgs/hash.png)
+![](imgs/nmap1.png)
 
-3.) Next lets decrypt the note1.txt.gpg file using the key "25daysofchristmas" found from the task hint.
+3.) Now that we confirmed that the machine is responding to a simple nmap scan, lets run a more in depth scan to enumerate all the running services on open ports.
 
 ```bash
-gpg -d note1.txt.gpg
+nmap -A -p- 10.10.12.139
 ```
-![](imgs/gpg.png)
+![](imgs/nmap2.png)
 
-4.) Last lets decrypt the note2_encrypted.txt using the private.key and the passphrase "hello" found from the task hint.
+4.) Lets open the webapp running on port 80, we can see that it is a simple IIS default page.
+
+![](imgs/webapp.png)
+
+5.) Since we dont see anything on the default webpage, lets run a dirsearch to find hidden directories. 
 
 ```bash
-openssl rsautl -decrypt -inkey private.key -in note2_encrypted.txt -out plaintext.txt
+dirsearch -u http://10.10.12.139 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
-![](imgs/openssl.png)
+![](imgs/dirsearch.png)
+
+6.) The dirsearch scan came back with /retro as a code 200 for the webapp, lets take a look at the webpage.
+
+![](imgs/retro.png)
+
+7.) After looking around, we clicked on a recent comment from the user Wade. This post has what looks like a password that he wanted to save for later. Also under the META sub-menu we can see both a Log in and WordPress.org links.
+
+![](imgs/password.png)
+
+8.) Clicking on the Log in link, we are sent to a wordpress login page at /retro/wp-login.php. Lets try logging in with the username:password combo we found wade:parzival
+
+![](imgs/wplogin.png)
+
+9.) Looks like that was the correct admin creds as we are now logged into the wordpress admin dashboard. Upon looking at the dashboard we can see the wordpress version is 5.2.1
+
+![](imgs/wpadmin.png)
 
 ## Tasks
 | Task | Question | Answer |
