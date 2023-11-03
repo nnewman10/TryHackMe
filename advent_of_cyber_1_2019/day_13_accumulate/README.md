@@ -77,9 +77,7 @@ http://10.10.12.139/retro/wp-content/themes/90s-retro/404.php
 ## Tasks
 | Task | Question | Answer |
 | --- | --- | --- |
-| Task #1 | What is the md5 hashsum of the encrypted note1 file? | 24cf615e2a4f42718f2ff36b35614f8f |
-| Task #2 | Where was elf Bob told to meet Alice? | Santa's Grotto |
-| Task #3 | Decrypt note2 and obtain the flag! | THM{ed9ccb6802c5d0f905ea747a310bba23} |
+| Task #1 | A web server is running on the target. What is the hidden directory which the website lives on? | /retro |
 
 
 
